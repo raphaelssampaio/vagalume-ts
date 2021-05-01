@@ -1,3 +1,4 @@
+import { apiKey } from '../../api-secret'
 import api from './api'
 
 export interface SongRank {
@@ -42,21 +43,21 @@ interface ArtistDefault {
 
 export const getSongs = async (): Promise<SongRank[]> => {
   const resp = await api.get(
-    '/rank.php?type=mus&period=month&scope=all&limit=5&apikey=9f0178c76a3d568b3727a1cdc2627ffd',
+    `/rank.php?type=mus&period=month&scope=all&limit=5&apikey=${apiKey}`,
   )
   return resp.data.mus.month.all
 }
 
 export const getArtists = async (): Promise<ArtistRank[]> => {
   const resp = await api.get(
-    '/rank.php?type=art&period=month&scope=all&limit=5&apikey=9f0178c76a3d568b3727a1cdc2627ffd',
+    `/rank.php?type=art&period=month&scope=all&limit=5&apikey=${apiKey}`,
   )
   return resp.data.art.month.all
 }
 
 export const getAlbum = async (): Promise<AlbumRank[]> => {
   const resp = await api.get(
-    '/rank.php?type=alb&period=month&scope=all&limit=5&apikey=9f0178c76a3d568b3727a1cdc2627ffd',
+    `/rank.php?type=alb&period=month&scope=all&limit=5&apikey=${apiKey}`,
   )
   return resp.data.alb.month.all
 }

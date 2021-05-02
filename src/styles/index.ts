@@ -65,4 +65,21 @@ export default StyleSheet.create({
     height: 180,
     marginBottom: 5,
   },
+  headerButton: {
+    width: 64,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerSafe: {
+    minHeight: 64,
+    backgroundColor: '#121212',
+    width: '100%',
+    flex: 0,
+  },
+  headerView: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+    height: 64,
+  },
 })

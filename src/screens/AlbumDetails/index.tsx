@@ -20,21 +20,24 @@ export default function AlbumDetails() {
     return (
       <>
         <TopNavigation onPress={() => navigation.goBack()} />
+        <Text style={[styles.rankText, styles.textCenter]}>Album Details</Text>
         <View style={styles.contentDetails}>
           <Image
             source={{ uri: album.art.pic_medium }}
             style={styles.imageDetails}
           />
-          <Text style={styles.title}>Song: {album.name}</Text>
-          <Text style={styles.subtitle}>Artist: {album.art.name}</Text>
-          <Text style={styles.subtitle}>Total views: {album.views}</Text>
-          <Text style={styles.subtitle}>Unique views: {album.uniques}</Text>
-          <TouchableOpacity
-            style={styles.button}
-            activeOpacity={0.7}
-            onPress={() => Linking.openURL(album.url)}>
-            <Text style={styles.white}>See</Text>
-          </TouchableOpacity>
+          <View style={styles.card}>
+            <Text style={[styles.title, styles.black]}>Song: {album.name}</Text>
+            <Text style={styles.subtitle}>Artist: {album.art.name}</Text>
+            <Text style={styles.subtitle}>Total views: {album.views}</Text>
+            <Text style={styles.subtitle}>Unique views: {album.uniques}</Text>
+            <TouchableOpacity
+              style={styles.button}
+              activeOpacity={0.7}
+              onPress={() => Linking.openURL(album.url)}>
+              <Text style={styles.white}>See</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </>
     )

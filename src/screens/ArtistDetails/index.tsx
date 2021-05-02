@@ -20,21 +20,28 @@ export default function ArtistDetails() {
     return (
       <>
         <TopNavigation onPress={() => navigation.goBack()} />
+        <Text style={[styles.rankText, styles.textCenter]}>
+          Artists Details
+        </Text>
         <View style={styles.contentDetails}>
           <Image
             source={{ uri: artist.pic_medium }}
             style={styles.imageDetails}
           />
-          <Text style={styles.title}>Artist: {artist.name}</Text>
-          <Text style={styles.subtitle}>Rank: {artist.rank}</Text>
-          <Text style={styles.subtitle}>Total views: {artist.views}</Text>
-          <Text style={styles.subtitle}>Unique views: {artist.uniques}</Text>
-          <TouchableOpacity
-            style={styles.button}
-            activeOpacity={0.7}
-            onPress={() => Linking.openURL(artist.url)}>
-            <Text style={styles.white}>See</Text>
-          </TouchableOpacity>
+          <View style={styles.card}>
+            <Text style={[styles.title, styles.black]}>
+              Artist: {artist.name}
+            </Text>
+            <Text style={styles.subtitle}>Rank: {artist.rank}</Text>
+            <Text style={styles.subtitle}>Total views: {artist.views}</Text>
+            <Text style={styles.subtitle}>Unique views: {artist.uniques}</Text>
+            <TouchableOpacity
+              style={styles.button}
+              activeOpacity={0.7}
+              onPress={() => Linking.openURL(artist.url)}>
+              <Text style={styles.white}>See</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </>
     )

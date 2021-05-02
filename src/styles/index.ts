@@ -33,9 +33,9 @@ export default StyleSheet.create({
   },
   title: {
     color: 'white',
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: '500',
-    lineHeight: 16,
+    lineHeight: 19,
     marginBottom: 3,
     fontFamily: fonts.text,
   },
@@ -55,7 +55,7 @@ export default StyleSheet.create({
     backgroundColor: '#535353',
     padding: 16,
     borderRadius: 8,
-    width: 120,
+    width: '100%',
     alignItems: 'center',
   },
   buttonComponent: {
@@ -64,6 +64,9 @@ export default StyleSheet.create({
   },
   white: {
     color: 'white',
+  },
+  black: {
+    color: '#121212',
   },
   image: {
     width: 120,
@@ -92,5 +95,13 @@ export default StyleSheet.create({
     color: '#6AD491',
     marginHorizontal: 16,
     fontFamily: fonts.text,
+  },
+  textCenter: { textAlign: 'center' },
+  card: {
+    width: 240,
+    padding: 10,
+    marginTop: 10,
+    borderRadius: 10,
+    backgroundColor: '#eee',
   },
 })

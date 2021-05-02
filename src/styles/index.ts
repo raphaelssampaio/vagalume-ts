@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import fonts from './fonts'
 
 export default StyleSheet.create({
   container: {
@@ -21,12 +22,14 @@ export default StyleSheet.create({
   },
   titleHome: {
     color: 'white',
-    fontSize: 17,
+    fontSize: 20,
     alignSelf: 'flex-end',
+    fontFamily: fonts.text,
   },
   subtitleHome: {
     color: 'green',
-    fontSize: 15,
+    fontSize: 18,
+    fontFamily: fonts.text,
   },
   title: {
     color: 'white',
@@ -34,11 +37,13 @@ export default StyleSheet.create({
     fontWeight: '500',
     lineHeight: 16,
     marginBottom: 3,
+    fontFamily: fonts.text,
   },
   subtitle: {
     color: '#535353',
     fontSize: 12,
     lineHeight: 14,
+    fontFamily: fonts.text,
   },
   imageDetails: {
     width: 240,
@@ -81,5 +86,11 @@ export default StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
     height: 64,
+  },
+  rankText: {
+    fontSize: 34,
+    color: '#6AD491',
+    marginHorizontal: 16,
+    fontFamily: fonts.text,
   },
 })

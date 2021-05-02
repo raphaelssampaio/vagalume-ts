@@ -45,6 +45,7 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
         <Image source={logo} />
+        <Text style={styles.rankText}>Ranking App</Text>
         <View style={styles.textView}>
           <Text style={styles.titleHome}>Top Songs</Text>
           <TouchableOpacity>

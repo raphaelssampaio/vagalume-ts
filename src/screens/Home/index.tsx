@@ -48,7 +48,8 @@ export default function Home() {
         <Text style={styles.rankText}>Ranking App</Text>
         <View style={styles.textView}>
           <Text style={styles.titleHome}>Top Songs</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('More', { detail: 'song' })}>
             <Text style={styles.subtitleHome}>See more</Text>
           </TouchableOpacity>
         </View>
@@ -69,7 +70,8 @@ export default function Home() {
         />
         <View style={styles.textView}>
           <Text style={styles.titleHome}>Top Artists</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('More', { detail: 'artist' })}>
             <Text style={styles.subtitleHome}>See more</Text>
           </TouchableOpacity>
         </View>
@@ -89,7 +91,8 @@ export default function Home() {
         />
         <View style={styles.textView}>
           <Text style={styles.titleHome}>Top Albuns</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('More', { detail: 'album' })}>
             <Text style={styles.subtitleHome}>See more</Text>
           </TouchableOpacity>
         </View>

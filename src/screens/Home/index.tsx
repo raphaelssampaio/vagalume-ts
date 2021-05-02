@@ -58,7 +58,9 @@ export default function Home() {
               name={data.item.name}
               artist={data.item.art.name}
               photo={data.item.art.pic_medium}
-              onPress={() => navigation.navigate('SongDetails', data)}
+              onPress={() =>
+                navigation.navigate('SongDetails', { song: data.item })
+              }
             />
           )}
           horizontal
@@ -76,7 +78,9 @@ export default function Home() {
             <ArtistCard
               name={data.item.name}
               photo={data.item.pic_medium}
-              onPress={() => navigation.navigate('ArtistDetails', data)}
+              onPress={() =>
+                navigation.navigate('ArtistDetails', { artist: data.item })
+              }
             />
           )}
           horizontal
@@ -95,7 +99,9 @@ export default function Home() {
               album={data.item.name}
               artist={data.item.art.name}
               cover={data.item.art.pic_medium}
-              onPress={() => navigation.navigate('AlbumDetails', data)}
+              onPress={() =>
+                navigation.navigate('AlbumDetails', { album: data.item })
+              }
             />
           )}
           horizontal

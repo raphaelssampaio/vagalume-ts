@@ -10,7 +10,6 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     AverageSans_400Regular,
   })
-
   if (!fontsLoaded) {
     return <AppLoading />
   }
